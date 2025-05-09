@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LA FORTUNE S’IMPOSE À NOUS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: orange;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+    }
+    main {
+      padding: 2em;
+    }
+    h1, h2 {
+      color: black;
+    }
+    .btn {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border: none;
+      margin: 5px;
+    }
+    .section {
+      margin-bottom: 2em;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 1em;
+    }
+    input, select {
+      padding: 8px;
+      width: 100%;
+      margin-bottom: 1em;
+    }
+    .dashboard, .payments, .annonces, .gains {
+      background: #f9f9f9;
+      padding: 1em;
+      border: 1px solid #ddd;
+    }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LA FORTUNE S’IMPOSE À NOUS</h1>
+    <p>SURBET ET FORTUNE GARANTIE</p>
+  </header>
+
+  <main>
+    <div class="section">
+      <h2>Connexion</h2>
+      <form>
+        <input type="email" placeholder="Email ou ID" required />
+        <input type="password" placeholder="Mot de passe" required />
+        <button class="btn">Se connecter</button>
+        <p><a href="#">Mot de passe oublié ?</a></p>
+      </form>
+    </div>
+
+    <div class="section">
+      <h2>Inscription via lien de parrainage</h2>
+      <form>
+        <input type="text" placeholder="Nom complet" required />
+        <input type="email" placeholder="Email" required />
+        <input type="tel" placeholder="Téléphone" required />
+        <input type="text" placeholder="Lien de parrainage" required />
+        <button class="btn">S’inscrire</button>
+      </form>
+    </div>
+
+    <div class="section dashboard">
+      <h2>Tableau de bord</h2>
+      <p>Visualisez votre réseau jusqu’au 6ᵉ niveau</p>
+      <ul>
+        <li>Filleul niveau 1 : Nom</li>
+        <li>Filleul niveau 2 : Nom</li>
+        <!-- Ajoutez plus dynamiquement avec backend -->
+      </ul>
+    </div>
+
+    <div class="section gains">
+      <h2>Mes Gains</h2>
+      <p>Total ce mois : 12 000 FCFA</p>
+      <p>Total cumulé : 34 000 FCFA</p>
+      <button class="btn">Exporter en PDF</button>
+    </div>
+
+    <div class="section annonces">
+      <h2>Annonce du jour</h2>
+      <p><strong>SURBET DU JOUR</strong> - Publié le : 08/05/2025</p>
+      <p>Côte 1.82 disponible sur 1xBet. Match : PSG vs OM.</p>
+    </div>
+
+    <div class="section payments">
+      <h2>Régler ma cotisation</h2>
+      <p>Montant : 2000 FCFA</p>
+      <button class="btn">Payer via CinetPay</button>
+      <button class="btn">Payer via PayDunya</button>
+    </div>
+
+    <div class="section">
+      <h2>Onglet Formation</h2>
+      <p>Découvrez des stratégies MLM et surebet dans notre section dédiée.</p>
+    </div>
+
+    <div class="section">
+      <h2>Liens utiles</h2>
+      <p>
+        <a href="#">Facebook</a> |
+        <a href="#">WhatsApp</a> |
+        <a href="#">Instagram</a>
+      </p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2025 - LA FORTUNE S’IMPOSE À NOUS | Signé par OZILEUDES Business</p>
+    <p>Contact : ozileudes1@gmail.com</p>
+  </footer>
+</body>
+</html>
