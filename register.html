@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inscription - LA FORTUNE S’IMPOSE À NOUS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 90%;
+      max-width: 500px;
+      margin: 50px auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #ff8c00;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+    input[type="submit"] {
+      margin-top: 20px;
+      background: #ff8c00;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    input[type="submit"]:hover {
+      background: #e67300;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Inscription</h2>
+    <form name="submit-to-google-sheet">
+      <label>Nom complet</label>
+      <input type="text" name="nom" required />
+
+      <label>Email</label>
+      <input type="email" name="email" required />
+
+      <label>Numéro WhatsApp</label>
+      <input type="text" name="telephone" required />
+
+      <label>Mot de passe</label>
+      <input type="password" name="password" required />
+
+      <label>Lien de parrainage (facultatif)</label>
+      <input type="text" name="parrain" />
+
+      <input type="submit" value="S’inscrire" />
+    </form>
+    <div class="footer">
+      Signé OZILEUDES Business
+    </div>
+  </div>
+
+  <!-- Script Google Sheets (à remplacer si backend évolue) -->
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/TON_SCRIPT_ID/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          alert("Inscription réussie !");
+          form.reset();
+        })
+        .catch(error => console.error('Erreur !', error.message))
+    })
+  </script>
+</body>
+</html>
